@@ -1,6 +1,8 @@
 import spacy
 import neuralcoref
+import en_core_web_sm
 
+nlp = en_core_web_sm.load()
 nlp = spacy.load("en_core_web_sm")
 neuralcoref.add_to_pipe(nlp)
 doc1 = nlp('My sister has a dog. She loves him.')
